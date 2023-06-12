@@ -10,6 +10,12 @@ const ExpenseForm = ({ onExpenseSubmit }) => {
   const handleSubmit = (event) => {
     event.preventDefault(); // Prevents the default form submission behavior
 
+    // Check if any of the form fields are empty
+    if (!amount || !description || !date) {
+      alert('Entry should not be empty');
+      return;
+    }
+
     // Create an expense object using the form input values
     const expense = {
       id: uuidv4(),
@@ -62,3 +68,4 @@ const ExpenseForm = ({ onExpenseSubmit }) => {
 };
 
 export default ExpenseForm;
+
