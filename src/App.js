@@ -15,7 +15,7 @@ const MyComponent = () => {
 
   return (
     <div className="container">
-      <img src={titleImage} alt="Title" />
+      <img src={titleImage} alt="Title" className="title-image" />
       <h2 className="section-title">Add Expense</h2>
       <ExpenseForm onExpenseSubmit={handleExpenseSubmit} />
       <h2 className="section-title">Expense List</h2>
